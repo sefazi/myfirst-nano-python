@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package getlist;
+
+message GetListRequest {
+    string Name = 1;
+}
+
+message GetListResponse {
+    string Name = 1;
+    string Address = 2;
+    string Age = 3;
+}
+
+service GetListService {
+    rpc GetList (GetListRequest) returns (GetListResponse);
+}
